@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica , Arial, sans-serif;
+}
+
+#main
+{
+}
+
+#header
+{
+    --h: 46px;
+    height: var(--h);
+    background-color: black;
+}
+
+#nav li a
+{
+    text-decoration: none;
+    color: white;
+    line-height: var(--h);
+    /* display: inline-block; */
+    /* position: relative; */
+
+}
+
+#nav li
+{
+    display: inline-flex;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+
+}
+
+#nav li:hover
+{
+    background-color: #fff;
+}
+
+#nav li:hover a
+{
+    color: black;
+
+}
+
+#nav .subnav
+{
+    display: none;
+}
+
+#slider
+{
+
+}
+#container
+{
+
+}
+#footer
+{
+
+}
