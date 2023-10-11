@@ -17,6 +17,8 @@ html{
     height: 46px;
     background-color: black;
     position: fixed;
+    top: 0px;
+    z-index: 1;
 }
 #nav {
     display: inline-block;
@@ -94,8 +96,8 @@ html{
     font-size: 25px;
     color: white;
     float:right;
-    line-height: 46px;
     padding: 0 21px;
+    line-height: 46px;
 }
 
 .search:hover
@@ -104,9 +106,65 @@ html{
     cursor: pointer;
 }
 
+
 #slider
 {
-    height: 1000px;
-    /* background-color: #333; */
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url(/assets/img/chicago.jpg);
+    background-size: cover    ;
+    position: relative;
+    /* background-repeat: no-repeat; */
+}
+
+.text-content
+{
+    bottom: 47px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.text-content .heading
+{
+    color: white;
+    font-size: 24px;
+}
+
+.text-content .content
+{
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+#content .content-section
+{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading
+{
+    text-align: center;
+    font-size: 15px;
+    margin: 20px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#content .about-text
+{
+    text-align: justify;
+    line-height: 1.5;
 }
 
