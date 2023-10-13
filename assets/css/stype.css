@@ -628,3 +628,35 @@ html{
     background-image: url(/assets/img/map.jpg);
     background-size: cover;
 }
+
+.footer .footer-icon a
+{
+    text-decoration: none;
+    padding: 4px;
+    font-size: 24px;
+    color: black;
+}
+
+.footer{
+    display: block;
+}
+
+.footer .footer-icon
+{
+    margin-top: 64px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .src 
+{
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 64px;
+}
+
+.footer .src a
+{
+    color: black;
+}
+
