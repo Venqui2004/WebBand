@@ -1,0 +1,60 @@
+@media (max-width: 740px)
+{
+    #header #nav #Home
+    {
+        display: inline-block;
+    }
+    #header #nav 
+    {
+        display: block;
+    }
+    #header li
+    {
+        display: block;
+        background-color: black;
+    }
+    #header.close
+    {
+        overflow: hidden;
+    }
+    #header #nav #More #subnav
+    {
+        display: none;
+        width: 100%;
+    }
+    #header #nav #More:hover #subnav
+    {
+        display: block;
+    }
+    #header #nav #More #subnav li
+    {
+        background-color: white;
+    }
+    #header #nav #More #subnav li:hover 
+    {
+        background-color: #ccc;
+    }
+    .icon-search
+    {
+        display: none;
+    }
+    #icon-view-list
+    {
+        display: block;
+        font-size: 15px;
+        color: white;
+        line-height: 46px;
+        padding: 0 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    
+    #icon-view-list:hover
+    {
+        background-color: #ccc;
+        color: white;
+    }
+    
+}
+

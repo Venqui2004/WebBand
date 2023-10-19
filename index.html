@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Chicago</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/icon-music.png">
     <link rel="stylesheet" href="./assets/css/stype.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
     <div id="main">
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li id="Home"><a href="#">Home</a></li>
+                <li><a href="#content">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li id="More">
                     <a href="">
                         More
@@ -29,6 +31,9 @@
             </ul>
             <div class="icon-search">
                 <i class="ti-search"></i>
+            </div>
+            <div id="icon-view-list">
+                <i class="ti-view-list"></i>
             </div>
         </div>
 
@@ -59,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="tour">
+        <div class="tour" id="tour">
             <div class="about-tour">
                 <h2 class="heading">TOUR DATES</h2> 
                 <p class="about-heading">Remember to book your tickets!</p>
@@ -102,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="about-contact">
                 <h2 class="heading">CONTACT</h2>
                 <p class="about-heading">Fan? Drop a note!</p>
@@ -180,6 +185,7 @@
 </html>
 
 <script>
+    // modal
     const selectBuy = document.querySelectorAll('.buy');
     const openModal = document.querySelector('.modal');
     const closeModal = document.querySelector('.modal-close');
@@ -198,8 +204,30 @@
     {
         slt.addEventListener('click' , showModal);
     }
-
     closeModal.addEventListener('click', removeModal);
     openModal.addEventListener('click', removeModal);
     containerModal.addEventListener('click' , function(event){event.stopPropagation()});
+
+    // mobile menu
+    var header = document.getElementById('header')
+    const itemmain = document.querySelector('#main')
+    const itemnav = document.querySelector('#nav')
+    itemnav.addEventListener('click', function(event){event.stopPropagation()})
+    function closeheader()
+    {
+        header.classList.add('close')
+    }
+    itemmain.addEventListener('click',closeheader)
+    var itemviewlist = document.getElementById('icon-view-list')
+    itemviewlist.addEventListener('click', function(event){event.stopPropagation()})
+    // itemviewlist.
+    // itemviewlist.addEventListener('click', function(event){event.stopPropagation()})
+    // var headerheight = itemheader.clientHeight;
+    // itemviewlist.onclick = function()
+    // {}
+    // var checkHeader = (itemheader.clientHeight===headerheight)
+    // if (checkHeader)
+    // {
+
+    // }
 </script>
