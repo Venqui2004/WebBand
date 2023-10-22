@@ -18,11 +18,11 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li id="More">
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="ti-angle-double-down"></i>
                     </a>
-                    <ul id="subnav">
+                    <ul class="subnav">
                         <li><a href="">Merchadise</a></li>
                         <li><a href="">Extras</a></li>
                         <li><a href="">Media</a></li>
@@ -51,7 +51,7 @@
             </div>
             <div class="about-band">
                 <div class="member-band">
-                    <p class="name-member">Name</p>
+                    <p class="name-member">Name</p >
                     <img src="/assets/img/bandmember.jpg" alt="avata" class="avata">
                 </div>
                 <div class="member-band">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="col2 send-infor">
                     <form action="">
-                        <input type="text" class="name" placeholder="Name" required>
+                        <input type="text"  class="name" placeholder="Name" required>
                         <input type="email" class="email" placeholder="Email" required>
                         <input type="text" class="message" placeholder="Message" required>
                         <input class="send" type="submit" value="Send">
@@ -213,21 +213,34 @@
     const itemmain = document.querySelector('#main')
     const itemnav = document.querySelector('#nav')
     itemnav.addEventListener('click', function(event){event.stopPropagation()})
-    function closeheader()
-    {
-        header.classList.add('close')
-    }
-    itemmain.addEventListener('click',closeheader)
     var itemviewlist = document.getElementById('icon-view-list')
     itemviewlist.addEventListener('click', function(event){event.stopPropagation()})
-    // itemviewlist.
-    // itemviewlist.addEventListener('click', function(event){event.stopPropagation()})
-    // var headerheight = itemheader.clientHeight;
-    // itemviewlist.onclick = function()
-    // {}
-    // var checkHeader = (itemheader.clientHeight===headerheight)
-    // if (checkHeader)
-    // {
-
-    // }
+    var hofheader = header.clientHeight
+    function closeheader()
+    {
+        header.style.height = null
+    }
+    itemmain.addEventListener('click',closeheader)
+    itemviewlist.onclick = function()
+    {
+        var check = (header.clientHeight === hofheader)
+        if (check)
+        {
+            header.style.height = 'auto';
+        }
+        else 
+        {
+            header.style.height = null;
+        }
+    }
+    const aitemviewlist = document.querySelectorAll('#nav li a[href*="#"]')
+    for (var i=0;i<aitemviewlist.length;i++)
+    {
+        var selecta=aitemviewlist[i];
+        selecta.onclick = function() 
+        { 
+            var check = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+            if (!check) header.style.height = null;
+        }
+    }
 </script>

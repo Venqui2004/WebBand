@@ -53,27 +53,27 @@ html{
     position: relative;
 }
 
-#More #subnav
+#More .subnav
 {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
 
-#More:hover #subnav li a
+#More:hover .subnav li a
 {
     color: black;
 }
 
-#More:hover #subnav li{
+#More:hover .subnav li{
     display: block;
 }
-#subnav
+.subnav
 {
     position: absolute;
 }
 
-#subnav li
+.subnav li
 {
     display: none; 
     top: 20px;
@@ -82,12 +82,12 @@ html{
 
 }
 
-#subnav li a
+.subnav li a
 {
     text-decoration: none;
 }
 
-#subnav li:hover
+.subnav li:hover
 {
     background-color: #ccc;
 }
@@ -106,7 +106,7 @@ html{
     background-color: red;
 }
 
-.icon-view-list
+#icon-view-list
 {
     display: none;
 }
@@ -115,7 +115,7 @@ html{
 {
     margin-top: 46px;
     padding-top: 50%;
-    background-image: url(/assets/img/chicago.jpg);
+    background-image: url(../img/chicago.jpg);
     background-size: cover    ;
     position: relative;
 }
@@ -143,6 +143,8 @@ html{
     margin-right: auto;
     left: 50%;
     transform: translateX(-50%);
+    text-shadow: 0 0 5px black;
+
 }
 
 #content
